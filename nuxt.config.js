@@ -66,9 +66,7 @@ export default {
     ['nuxt-matomo', {
       matomoUrl: process.env.VUE_APP_MATOMO_URL,
       siteId: process.env.VUE_APP_MATOMO_SITE_ID
-    }],
-    // https://github.com/nuxt-community/component-cache-module
-    '@nuxtjs/component-cache'
+    }]
   ],
 
   // https://auth.nuxtjs.org/
