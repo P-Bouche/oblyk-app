@@ -26,7 +26,7 @@ export default {
     signIn: 'Sign in',
     signUp: 'Sign up',
     addLevel: 'Add level',
-    areYouSur: 'Are you sur ?',
+    areYouSur: 'Are you sure ?',
     addSystem: 'Add system',
     uploadMap: 'Upload map',
     browse: 'Browse ...',
@@ -59,6 +59,7 @@ export default {
     removeFromLibrary: 'Remove from my library',
     valueCopied: '%{value} copied !',
     errorHasOccurred: 'An error has occurred',
+    localisationError: 'An error occurred while retrieving the location',
     changeCover: 'Change cover',
     addLink: 'Add link',
     addComment: 'Add comment',
@@ -74,7 +75,7 @@ export default {
     seeNumberMore: 'See %{number} more',
     addPark: 'Add a parking',
     addApproach: 'Add approach',
-    createAndQuite: 'Create & quite',
+    createAndQuite: 'Create & quit',
     continueToAdd: 'Continue to add',
     addArea: 'Add new crags group',
     addRepetition: 'Add a repetition',
@@ -98,7 +99,8 @@ export default {
     unsubscribeMe: 'Unsubscribe me',
     accept: 'Accept',
     reject: 'Reject',
-    update: 'Update'
+    update: 'Update',
+    aroundMe: 'Around me'
   },
   colors: {
     noColor: 'No color',
@@ -176,7 +178,7 @@ export default {
         title: 'Support us',
         noLimite: 'In Oblyk there are no limits, no premium account, no adds, no sponsored link, everything free! ; )',
         freeBut: "If it is free and Oblyk doesn't get any money, does it mean it is a zero cost project?",
-        unfortunately: 'Unfortunately no, as every website, oblyk need to be hosted in a data center and rent a domain name to exist.<br>And that is not free...',
+        unfortunately: 'Unfortunately no, as every website, Oblyk needs to be hosted in a data center and rent a domain name to exist.<br>And that is not free...',
         extraEuro: "If you have a few money to spent, you like the work done and want to encourage Oblyk development, you can make a donation ; )<br>It is for us a priceless help! You will help us continue the development and ensure it's future ; )",
         thanks: 'Thank you in advance for your generosity!'
       },
@@ -196,7 +198,7 @@ export default {
       },
       grade: {
         title: 'Grades',
-        intro: 'Oblyk allows the use of many climbing grades system (French, English, American,...).For each one, a color code is given to quickly show routes difficulties even if not familiar with the grade system.',
+        intro: 'Oblyk allows the use of many climbing grades system (French, English, American,...). For each one, a color code is given to quickly show routes difficulties even if not familiar with the grade system.',
         equivalence: 'The following equivalence table is questionable, its purpose is to give an order of idea of the difficulty of a grade and not to give exactly the equivalence of one system to another.',
         weighting: 'In Oblyk, each grades can have following weights :',
         developerBonus: 'Developers Bonus:',
@@ -257,7 +259,7 @@ export default {
         title: 'Our tools for climbing guidebooks',
         intro: `
         We are convinced that <strong>the future of rock climbing</strong> depends on <strong>climbing guidebook</strong>, whether it be for <strong>information on climbing crags</strong>,
-        <strong>contributing to their maintenance</strong> or <strong>promoting outdoor climbing</strong>. <strong>CLimbing guidebooks are part of the history of our sport</strong> and its future.<br>
+        <strong>contributing to their maintenance</strong> or <strong>promoting outdoor climbing</strong>. <strong>Climbing guidebooks are part of the history of our sport</strong> and its future.<br>
         We put all our imagination into designing tools that allow the climbing community to find and buy topos of the crags where they climb.
         `,
         features: {
@@ -274,7 +276,7 @@ export default {
             action: 'Find a guidebook'
           },
           alternative: {
-            title: 'Buying a guidebook is good, buying the right ones is better!',
+            title: 'Buying a guidebook is good, buying the right one is better!',
             body1: 'Some guidebooks do not participate in the equipment of climbing crags. Even if they can present an interesting compilation of a region, it is preferable to have the originals to support the work of the bolters.',
             body2: 'To help you find the right guidebook we have developed <strong>two tools</strong>.',
             body3: 'A clear indication of whether a guidebook contributes to the equipment of crags',
@@ -299,7 +301,7 @@ export default {
       },
       newsletterSubscribe: {
         title: 'Subscribe to the newsletter',
-        paragraphe: 'About once a quarter we send an email about oblyk acutalities, community expansion, developments of the month and projects to come. ',
+        paragraphe: 'About once a quarter we send an email about Oblyk acutalities, community expansion, developments of the month and projects to come. ',
         stayInformed: 'You want to be kept in the loop? enter your e-mail address here!',
         successTitle: 'You are now registered to our newsletter!',
         successParagraphe: 'We hope you enjoy hearing from us : )',
@@ -322,15 +324,15 @@ export default {
         goodContinuation: 'We wish you a good continuation!'
       },
       apiAndDevelopers: {
-        title: 'Api & Developers',
+        title: 'API & Developers',
         paragraphe: 'The Oblyk crags and climbing routes database is open in API, you can freely consult it for open-source, personal or student projects.',
-        stepFor: 'Here are the steps to follow to use the Api :',
+        stepFor: 'Here are the steps to follow to use the API :',
         connectOrRegister: 'You must have a normal Oblyk user account that will allow you to administer your organisation.',
         createYourOrganization: 'Create your organisation to get your API key.',
         createMyOrganisation: 'Create my organisation',
-        readDoc: 'Consult the Api documentation.',
-        oblykApiDocumentation: 'Oblyk Api Documentation',
-        gitHub: "Feel free to follow the project <a href='https://github.com/oblyk' target='_blank'>GitHub of Oblyk</a> to know the evolutions or participate in improving the Api!"
+        readDoc: 'Consult the API documentation.',
+        oblykApiDocumentation: 'Oblyk API Documentation',
+        gitHub: "Feel free to follow the project <a href='https://github.com/oblyk' target='_blank'>GitHub of Oblyk</a> to know the evolutions or participate in improving the API!"
       }
     }
   },
@@ -440,6 +442,56 @@ export default {
         new_article: 'New article! %{name}'
       }
     },
+    country: {
+      search: 'Search town',
+      mapExplain: 'Click on a department to find out about <strong>climbing sites</strong>, <strong>climbing gym</strong> and <strong>topos</strong> in that department.',
+      france: {
+        title: 'Climb in France',
+        searchPlaceHolder: 'Marseilles, Paris, Grenoble, etc.',
+        departmentMap: 'Map of the departments of France',
+        departmentList: 'List of departments in France'
+      }
+    },
+    department: {
+      climbing: 'Climbing',
+      gradeOf: 'in grades',
+      inFigures: 'in figures',
+      mapTitle: 'Maps of crags and climbing gyms',
+      bookCovering: 'One climbing book covering | %{count} climbing books covering',
+      selfGeneratedDescription: 'Description generated from the data available on Oblyk.',
+      towns: 'Towns',
+      namePrefixType: {
+        apostrophe: '',
+        plural: '',
+        masculine: '',
+        feminine: '',
+        nothing: ''
+      },
+      inSentencePrefixType: {
+        in_apostrophe: 'in ',
+        on: 'in ',
+        in_plural: 'in ',
+        in_masculine: 'in ',
+        in_feminine: 'in ',
+        at: 'in '
+      }
+    },
+    town: {
+      title: 'Climbing around %{name}',
+      searchAnotherCity: 'Look for another city',
+      cragsAround: 'One crag around %{name} | %{count} crags around %{name}',
+      nearestCrag: 'The crag nearest to %{name}',
+      gymsAround: 'One indoor climbing gym in and around %{name} | %{count} indoor climbing gyms in and around %{name}',
+      nearestGym: 'The climbing gym nearest to %{name}',
+      guideBooks: 'Climbing guide books around %{name}',
+      map: 'Climbing map of %{name}',
+      density: {
+        low: 'a low density',
+        medium: 'a medium density',
+        large: 'a high density'
+      },
+      pluralStyle: '1 site | %{count} sites '
+    },
     map: {
       title: 'Map',
       site: 'Site',
@@ -467,12 +519,19 @@ export default {
         funClimbing: 'Fun Climbing'
       }
     },
+    localization: {
+      title: 'My location',
+      explain: 'Enabling location allows you to have local information in your feed, to search for crags, climbing gyms or climbers around you.',
+      activated: 'Location activated',
+      deactivated: 'Activate my location',
+      private: 'Your location is not recorded by Oblyk.'
+    },
     session: {
       connectAlert: 'You must be logged in to access this page',
       alreadyConnected: 'You are logged in',
       stayConnected: 'Stay connected',
       termsOfUse: 'I have read and accept the terms and conditions of use of Oblyk',
-      youMustBeAgree: 'You must agree to the oblyk terms of use',
+      youMustBeAgree: 'You must agree to the Oblyk terms of use',
       newsletterSubscribe: 'Receive the newsletter (one per quarter approximately)',
       forgottenPassword: 'Forgotten password ?',
       forgottenPasswordExplain: 'Enter your email address so that we can send you a link to cancel your password.',
@@ -579,6 +638,11 @@ export default {
         name: 'By name',
         note: 'By note'
       }
+    },
+    cragsTable: {
+      crags: 'Crags',
+      lines: 'Lines',
+      orientations: 'Orientations'
     },
     ascentCragRoute: {
       new: 'Add %{name} in my logbook',
@@ -735,7 +799,7 @@ export default {
     },
     organization: {
       addNew: 'Register my organization',
-      apiDocumentation: 'Api documentation',
+      apiDocumentation: 'API documentation',
       ressources: 'Ressources',
       manage: 'Manage',
       refreshApiKey: 'Regenerate the API key',
@@ -787,7 +851,7 @@ export default {
     gymAdministrationRequest: {
       helloName: 'Hello %{name}',
       isAlreadyAdministered: 'This gym is already managed by its manager.',
-      needAccount: 'To take over the management of a climbing gym, you need an oblyk account in your name.',
+      needAccount: 'To take over the management of a climbing gym, you need an Oblyk account in your name.',
       explainJustification: 'Please fill out the form below and give us some information that will allow us to verify that you are entitled to manage this climbing gym.',
       requestIsSent: 'We have registered your request !<br> We will process it as soon as possible.'
     },
@@ -870,7 +934,7 @@ export default {
       emptyTickList: "You don't have any route in your tick list for the moment",
       sortItem: {
         difficulty: 'Difficulty',
-        crag: 'Crag',
+        crags: 'Crag',
         released_at: 'Date'
       },
       climbingItems: {
@@ -1129,7 +1193,6 @@ export default {
         news: 'News',
         contribute: 'Contribute',
         oblyk: 'Oblyk',
-        features: 'Features',
         subHeaders: {
           me: 'Me',
           account: 'Account',
@@ -1157,7 +1220,7 @@ export default {
       footer: {
         clickToTop: 'Click to return to the top of the page',
         itIsTimeToGoBackUp: "It's time to go back up !",
-        moreAboutOblyk: 'More about oblyk',
+        moreAboutOblyk: 'More about Oblyk',
         followUs: 'Follow us',
         news: 'News',
         contact: 'Contact',
@@ -1170,8 +1233,10 @@ export default {
         facebook: 'Facebook',
         github: 'github',
         newsletter: 'Newsletter',
-        apiAndDevelopers: 'Api & Developers',
-        guidesAndFeatures: 'Guides & Features'
+        apiAndDevelopers: 'API & Developers',
+        guidesAndFeatures: 'Guides & Features',
+        data: 'Data',
+        climbInFrance: 'Climb in France'
       },
       errors: {
         404: {
@@ -1235,14 +1300,14 @@ export default {
       title: 'Support Us',
       body1: 'In Oblyk there are no limits, no premium account, no adds, no sponsored link, everything free ! ; )',
       body2: "If it is free and Oblyk doesn't get any money, does it mean it is a zero cost project ?",
-      body3: 'Unfortunately no, as every website, oblyk need to be hosted in a data center and rent a domain name to exist.<br>And that is not free... ',
+      body3: 'Unfortunately no, as every website, Oblyk needs to be hosted in a data center and rent a domain name to exist.<br>And that is not free... ',
       action: 'Support Us'
     },
     developer: {
-      title: 'An open database in Api!',
+      title: 'An open database in API!',
       body1: 'With Oblyk, we want to build an open and reusable knowledge base for humans and machines.',
-      body2: 'Via our Api we make our crag and route database available to other open-source projects, public, personal or student.',
-      body3: 'Contributing to oblyk means allowing other climbing projects to be created or improved.',
+      body2: 'Via our API we make our crag and route database available to other open-source projects, public, personal or student.',
+      body3: 'Contributing to Oblyk means allowing other climbing projects to be created or improved.',
       action: 'Read more'
     },
     oblykAndGuide: {
@@ -1337,7 +1402,7 @@ export default {
       description: 'See the interactive map of climbing gyms on Oblyk, either in France, or in the World, and see their detailed information'
     },
     partnerMap: {
-      title: 'Map of oblyk climbers',
+      title: 'Map of Oblyk climbers',
       description: 'The climber map allows you to find a climbing partner near you. Locate yourself, find a climber, contact him and go climbing together!'
     },
     gym: {
@@ -1349,9 +1414,9 @@ export default {
       requiredAdministrator: 'Required administrator',
       administratorRequestDescription: 'Manage the %{name} climbing gym to create your indoor topo and animate your community',
       admin: '%{name} - Dashboard',
-      banner: 'Changer le bandeau',
-      logo: 'Changer le logo',
-      new: "Ajouter une nouvelle salle d'escalade",
+      banner: 'Edit banner',
+      logo: 'Edit logo',
+      new: 'Add a new climbing gym',
       grade: {
         edit: 'Edit grade system',
         new: 'New grade system',
@@ -1414,6 +1479,20 @@ export default {
     },
     newConversation: {
       title: 'New conversation'
+    },
+    climbingAround: {
+      france: {
+        title: 'Climbing in France: crags, guide books and climbing gyms',
+        description: 'Find information on climbing sites in France (routes, multi pitches, boulder, via ferrata ...), guide books and climbing gyms on Oblyk'
+      },
+      department: {
+        title: 'Climbing %{name} : crags, guide book and climbing gyms',
+        description: 'Find information on climbing sites %{name} (routes, multi pitches, boulder, via ferrata ...), guide books and climbing gyms on Oblyk'
+      },
+      town: {
+        title: 'Climbing %{name} : crags, guide book and climbing gyms',
+        description: 'Find information on climbing sites around %{name} (%{department_number}) : routes, multi pitches, boulder, via ferrata ..., guide books and climbing gyms on Oblyk'
+      }
     },
     crag: {
       title: '%{name}, climb in %{region}',
@@ -1485,8 +1564,8 @@ export default {
       photos: 'Newsletter pictures',
       description: 'Consulted here the newsletter you received in your email box',
       subscribe: {
-        newTitle: 'Receive the oblyk newsletter',
-        newDescription: 'Subscribe to the oblyk newsletter to receive occasional news from the climbing community',
+        newTitle: 'Receive the Oblyk newsletter',
+        newDescription: 'Subscribe to the Oblyk newsletter to receive occasional news from the climbing community',
         successTitle: 'You are subscribed to the newsletter',
         successDescription: 'You are now subscribed to our newsletter, see you soon in your mailbox'
       },
@@ -1539,14 +1618,14 @@ export default {
     },
     user: {
       title: '%{name} his climbing profile',
-      description: 'View the profile of  %{name}, climber of the community oblyk',
+      description: 'View the profile of  %{name}, climber of the community Oblyk',
       ascent: {
         title: 'The ascents of %{name}',
         description: 'Consult the ascents made by %{name} throughout his climbing life'
       },
       follower: {
         title: 'The subscribers of %{name}',
-        description: 'See the climbers subscribed to %{name}, climber of the community oblyk'
+        description: 'See the climbers subscribed to %{name}, climber of the community Oblyk'
       },
       media: {
         title: 'Photos and videos of %{name}',
@@ -1594,7 +1673,7 @@ export default {
       resetPasswordDescription: 'Forgot your password? Enter your email address to reset it',
       privacyStep: 'My privacy',
       signInTitle: 'Connect me',
-      signInDescription: 'Connect me to my oblyk account and find all informations about the climbing around me',
+      signInDescription: 'Connect me to my Oblyk account and find all informations about the climbing around me',
       signUpTitle: 'Create an account',
       signUpDescription: 'Create an account to track my progress, find climbing partners and get local info from the climbing community'
     },
@@ -1605,7 +1684,7 @@ export default {
       title: 'Account deleted'
     },
     apiAndDevelopers: {
-      title: 'Climbing crags and routes Api',
+      title: 'Climbing crags and routes API',
       description: "Oblyk's APIs allow you to consult a large database of crags and climbing routes in France and in the world"
     },
     organization: {
@@ -1759,7 +1838,7 @@ export default {
     },
     organization: {
       name: 'Name',
-      api_access_key: 'Api access key',
+      api_access_key: 'API access key',
       api_usage_type: 'Usage type',
       phone: 'Phone',
       email: 'Email',

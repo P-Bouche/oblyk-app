@@ -64,15 +64,21 @@
           :fill-opacity="circleProperties.fillOpacity || 0.2"
           :weight="circleProperties.weight || 3"
         />
+
+        <l-marker
+          v-if="showLocalization && IAmGeolocated"
+          :lat-lng="myLatLng"
+          :icon="myLocationIcon"
+        />
       </l-map>
     </div>
   </client-only>
 </template>
 
 <script>
-import L from 'leaflet'
+import L, { icon } from 'leaflet'
 import 'leaflet/dist/leaflet.css'
-import { LMap, LTileLayer, LControlZoom, LGeoJson, LControl, LCircle } from 'vue2-leaflet'
+import { LMap, LTileLayer, LControlZoom, LGeoJson, LControl, LCircle, LMarker } from 'vue2-leaflet'
 import Vue2LeafletMarkerCluster from 'vue2-leaflet-markercluster'
 import { MapPopupHelpers } from '@/mixins/MapPopupHelpers'
 import { MapMarkerHelpers } from '@/mixins/MapMarkerHelpers'
@@ -91,6 +97,7 @@ export default {
     LControl,
     LControlZoom,
     LTileLayer,
+    LMarker,
     'v-marker-cluster': Vue2LeafletMarkerCluster
   },
   mixins: [MapPopupHelpers, MapMarkerHelpers],
@@ -138,6 +145,22 @@ export default {
       type: Object,
       required: false,
       default: null
+    },
+    showLocalization: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    options: {
+      type: Object,
+      required: false,
+      default: () => {
+        return {
+          department: {
+            clickable: true
+          }
+        }
+      }
     }
   },
 
@@ -171,13 +194,26 @@ export default {
       geoJsonOptions: {
         onEachFeature: this.onEachFeatureFunction(),
         pointToLayer: this.pointToLayerFunction()
-      }
+      },
+      myLocationIcon: icon(
+        {
+          iconUrl: '/markers/i-am-here.png', iconSize: [14, 14], iconAnchor: [7, 7], popupAnchor: [0, -7]
+        }
+      )
     }
   },
 
   computed: {
     layer () {
       return this.layers[this.layerIndex]
+    },
+
+    IAmGeolocated () {
+      return this.$store.getters['geolocation/IAmGeolocated']
+    },
+
+    myLatLng () {
+      return [this.$store.state.geolocation.latitude, this.$store.state.geolocation.longitude]
     }
   },
 
@@ -208,7 +244,21 @@ export default {
 
     onEachFeatureFunction () {
       return (feature, layer) => {
-        layer.bindPopup(this.getHtmlPopup(feature))
+        if (feature.properties.type === 'Department') {
+          layer.options.color = 'rgb(234, 141, 125)'
+          layer.options.weight = 2
+          if (this.options.department.clickable) {
+            layer.options.fillColor = 'rgb(255, 255, 255)'
+            layer.on('click', () => {
+              this.$router.push(`/escalade-en/${feature.properties.country_slug_name}/${feature.properties.department_number}/${feature.properties.slug_name}`)
+            })
+          } else {
+            layer.options.fill = false
+            layer.options.interactive = false
+          }
+        } else {
+          layer.bindPopup(this.getHtmlPopup(feature))
+        }
       }
     },
 
