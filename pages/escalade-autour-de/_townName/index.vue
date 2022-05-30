@@ -83,7 +83,7 @@
             {{ $t('components.town.nearestCrag', { name: town.name }) }}
           </h2>
           <p>
-            Il n'y pas de site de grimpe naturel à moins de <strong>{{ town.dist }} km</strong> de {{ town.name }}.
+            Il n'y a pas de site de grimpe naturel à moins de <strong>{{ town.dist }} km</strong> de {{ town.name }}.
             Le site le plus proche est <strong>{{ toCragObject(town.crags.nearest).name }}</strong> à {{ town.crags.nearest_dist }} km.
           </p>
 
@@ -127,7 +127,7 @@
             {{ $t('components.town.nearestGym', { name: town.name }) }}
           </h2>
           <p>
-            Il n'y pas de salle à moins de <strong>{{ town.dist }} km</strong> de {{ town.name }},
+            Il n'y a pas de salle à moins de <strong>{{ town.dist }} km</strong> de {{ town.name }},
             il faudra s'éloigner de {{ town.gyms.nearest_dist }} km pour trouver la salle <strong>{{ toGymObject(town.gyms.nearest).name }}</strong> à <strong>{{ town.gyms.nearest.city }}</strong>.
           </p>
           <gym-small-card
@@ -167,29 +167,32 @@
           </v-sheet>
         </div>
 
-        <h2 class="mt-9">
-          <v-icon left class="vertical-align-baseline mb-1">
-            {{ mdiMap }}
-          </v-icon>
-          {{ $t('components.town.map', { name: town.name }) }}
-        </h2>
-        <client-only>
-          <v-sheet
-            rounded
-            class="pa-4 mt-3"
-          >
-            <div class="town-map-area">
-              <spinner v-if="loadingGeoJson" />
-              <leaflet-map
-                v-else
-                :track-location="false"
-                :clustered="false"
-                :geo-jsons="geoJsons"
-                map-style="outdoor"
-              />
-            </div>
-          </v-sheet>
-        </client-only>
+        <div v-if="geoJsons && geoJsons.features.length > 0">
+          <h2 class="mt-9">
+            <v-icon left class="vertical-align-baseline mb-1">
+              {{ mdiMap }}
+            </v-icon>
+            {{ $t('components.town.map', { name: town.name }) }}
+          </h2>
+
+          <client-only>
+            <v-sheet
+              rounded
+              class="pa-4 mt-3"
+            >
+              <div class="town-map-area">
+                <spinner v-if="loadingGeoJson" />
+                <leaflet-map
+                  v-else
+                  :track-location="false"
+                  :clustered="false"
+                  :geo-jsons="geoJsons"
+                  map-style="outdoor"
+                />
+              </div>
+            </v-sheet>
+          </client-only>
+        </div>
       </div>
     </v-container>
     <app-footer />
@@ -293,9 +296,11 @@ export default {
         .geoJson(this.$route.params.townName)
         .then((resp) => {
           this.geoJsons = { features: resp.data.features }
-          setTimeout(() => {
-            this.$root.$emit('fitMapOnGeoJsonBounds')
-          }, 2000)
+          if (resp.data.features.length > 0) {
+            setTimeout(() => {
+              this.$root.$emit('fitMapOnGeoJsonBounds')
+            }, 2000)
+          }
         })
         .finally(() => {
           this.loadingGeoJson = false

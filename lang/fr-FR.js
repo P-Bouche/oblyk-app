@@ -458,7 +458,7 @@ export default {
       climbing: 'Escalade',
       gradeOf: 'en cotations',
       inFigures: 'en quelques chiffres',
-      mapTitle: "Cartes des sites et salles d'escalades",
+      mapTitle: "Carte des sites et salles d'escalade",
       bookCovering: 'Un topo couvre | %{count} topos couvrent',
       selfGeneratedDescription: 'Description générée à partir des données disponibles sur Oblyk.',
       towns: 'Les villes',
@@ -481,7 +481,7 @@ export default {
     town: {
       title: 'Escalade autour de %{name}',
       searchAnotherCity: 'Chercher une autre ville',
-      cragsAround: "Un site d'escalade aux alentour de %{name} | %{count} sites d'escalade aux alentour de %{name}",
+      cragsAround: "Un site d'escalade aux alentours de %{name} | %{count} sites d'escalade aux alentours de %{name}",
       nearestCrag: 'La falaise la plus proche de %{name}',
       gymsAround: 'Une salle pour grimper en indoor à %{name} et aux alentours | %{count} salles pour grimper en indoor à %{name} et aux alentours',
       nearestGym: 'La salle la plus proche de %{name}',
@@ -1489,15 +1489,15 @@ export default {
     climbingAround: {
       france: {
         title: "Escalade en France: falaises, topos et salles d'escalade",
-        description: "Retrouve les informations sur les sites d'escalade en France (voir, grande voie, bloc, via ferrata ...), les topos et les salles d'escalade sur Oblyk"
+        description: "Retrouve les informations sur les sites d'escalade en France (voie, grande voie, bloc, via ferrata ...), les topos et les salles d'escalade sur Oblyk"
       },
       department: {
         title: "Escalade %{name} : falaises, topos et salles d'escalade",
-        description: "Retrouve les informations sur les sites d'escalade %{name} (voir, grande voie, bloc, via ferrata ...), les topos et les salles d'escalade sur Oblyk"
+        description: "Retrouve les informations sur les sites d'escalade %{name} (voie, grande voie, bloc, via ferrata ...), les topos et les salles d'escalade sur Oblyk"
       },
       town: {
         title: "Escalade %{name} : falaises, topos et salles d'escalade",
-        description: "Retrouve les informations sur les sites d'escalade autour de %{name} (%{department_number}) : voir, grande voie, bloc, via ferrata ..., les topos et les salles d'escalade sur Oblyk"
+        description: "Retrouve les informations sur les sites d'escalade autour de %{name} (%{department_number}) : voie, grande voie, bloc, via ferrata ..., les topos et les salles d'escalade sur Oblyk"
       }
     },
     crag: {
