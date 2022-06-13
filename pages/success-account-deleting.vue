@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-container class="common-page-container">
-      <h1 class="loved-by-king mt-5 text-center">
+      <h1 class="mt-5 text-center">
         {{ $t('common.pages.successAccountDeleting.title') }}
       </h1>
 
@@ -29,10 +29,6 @@ export default {
         { hid: 'robots', name: 'robots', content: 'noindex' }
       ]
     }
-  },
-
-  mounted () {
-    this.$store.commit('layout/LAYOUT_PADDING', true)
   }
 }
 </script>

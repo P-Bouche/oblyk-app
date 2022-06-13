@@ -93,6 +93,7 @@ export default {
     unPublish: 'Ne plus publier',
     writeAnArticle: 'Écrire un article',
     addCrag: 'Ajouter une falaise',
+    addGym: 'Ajouter une salle',
     readMore: 'Lire plus',
     writeNewsletter: 'Écrire une newsletter',
     send: 'Envoyer',
@@ -166,6 +167,7 @@ export default {
     example: 'exemple',
     me: 'Moi',
     posted: 'Posté',
+    crosses: 'croix',
     pages: {
       cookies: 'Oblyk utilise des cookies uniquement à des fins de fonctionnement.',
       newVersion: "Une nouvelle version d'Oblyk est là !",
@@ -1140,6 +1142,13 @@ export default {
     messenger: {
       messageEmpty: "Il n'y a pas de message dans cette conversation pour l'instant"
     },
+    dailyCrosses: {
+      title: 'Souvenir de mes croix',
+      iMade: "J'ai fait %{count} croix %{ago} <cite>(le %{date)</cite>",
+      addCrosses: 'Compléter mon carnet',
+      myLogbook: 'Mon carnet de grimpe',
+      myMap: 'Ma carte'
+    },
     article: {
       whatsNew: 'Quoi de neuf?',
       edit: "Modifier l'article",
@@ -1176,6 +1185,8 @@ export default {
         login: 'Me connecter',
         logOut: 'Me déconnecter',
         darkTheme: 'Thème sombre',
+        addCross: 'Ajouter une croix',
+        searchPlaceHolder: "Chercher un site, une salle, quelqu'un, etc.",
         user: {
           avatar: 'Photo de profil',
           banner: 'Photo du bandeau',
@@ -1192,35 +1203,63 @@ export default {
         mapGyms: 'Carte des salles',
         myMap: 'Ma Carte',
         mapClimber: 'Carte des grimpeur·euse·s',
-        tools: 'Outils',
+        tools: 'Boîte à outils',
         helps: 'Aides',
         about: 'À propos',
         donation: 'Nous soutenir',
         news: 'Actualités',
         contribute: 'Contribuer',
         oblyk: 'Oblyk',
+        contact: 'Nous contacter',
+        toolBar: {
+          account: 'Gérer mon profil',
+          notification: 'Mes notifications',
+          theme: 'Changer le thème',
+          localisation: 'Contrôler ma localisation',
+          search: 'Chercher sur Oblyk'
+        },
         subHeaders: {
           me: 'Moi',
-          account: 'Compte',
+          mySpace: 'Mon espace',
+          account: 'Rejoindre Oblyk',
           myGyms: 'Mes salles',
           myOrganizations: 'Mes organisations',
           mapsAndTools: 'Cartes & Outils',
           project: 'Le projet',
-          admin: 'Admin'
+          find: 'Trouver',
+          admin: 'Admin',
+          enrich: 'Enrichir Oblyk',
+          about: "À propos d'Oblyk"
         },
         user: {
+          home: 'Home',
           feed: 'Fil',
           messenger: 'Messagerie',
-          ascents: 'Croix',
+          ascents: 'Mon carnet de grimpe',
           subscribers: 'Abonnés',
           guideBooks: 'Ma topothèque',
           favorites: 'Favoris',
-          settings: 'Paramètres'
+          settings: 'Paramètres',
+          myMap: 'Ma carte'
         },
         guideBook: {
           title: 'Les topos',
           features: 'Top fonctionnalités !',
           news: 'Les nouveautés'
+        },
+        find: {
+          crag: 'Un site naturel',
+          gym: 'Une salle',
+          guideBook: {
+            title: 'Un topo',
+            around: "Autour d'une ville",
+            new: 'Les nouveautés'
+          },
+          climbers: {
+            title: 'Un·e grimpeur·euse',
+            map: 'Carte des grimpeurs·euses',
+            how: 'Comment ça marche ?'
+          }
         }
       },
       footer: {

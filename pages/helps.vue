@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-container class="common-page-container">
-      <h1 class="loved-by-king mt-5 text-center">
+      <h1 class="mt-5 text-center">
         {{ $t('helps.title') }}
       </h1>
 
@@ -37,10 +37,6 @@ export default {
         { hid: 'og:image', property: 'og:image', content: `${process.env.VUE_APP_OBLYK_APP_URL}/images/oblyk-og-image.jpg` }
       ]
     }
-  },
-
-  mounted () {
-    this.$store.commit('layout/LAYOUT_PADDING', true)
   }
 }
 </script>

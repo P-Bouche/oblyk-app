@@ -93,6 +93,7 @@ export default {
     unPublish: 'Un publish',
     writeAnArticle: 'Write an article',
     addCrag: 'Add crag',
+    addGym: 'Add climbing gym',
     readMore: 'Read more',
     writeNewsletter: 'Write newsletter',
     send: 'Send',
@@ -166,6 +167,7 @@ export default {
     between: 'between',
     me: 'Me',
     posted: 'Posted',
+    crosses: 'crosses',
     pages: {
       cookies: 'Oblyk uses cookies only for operational purposes.',
       newVersion: 'A new Oblyk version is here!',
@@ -1140,6 +1142,13 @@ export default {
     messenger: {
       messageEmpty: 'There is no message in this conversation at the moment.'
     },
+    dailyCrosses: {
+      title: 'Memories of my climbs',
+      iMade: 'I made %{count} crosses %{ago} <cite>(on %{date)</cite>',
+      addCrosses: 'Complete my logbook',
+      myLogbook: 'My logbook',
+      myMap: 'My map'
+    },
     article: {
       whatsNew: 'Whats new?',
       edit: 'Edit article',
@@ -1176,6 +1185,8 @@ export default {
         login: 'Login',
         logOut: 'Logout',
         darkTheme: 'Dark theme',
+        addCross: 'Add cross',
+        searchPlaceHolder: 'Search for a climbing site, a gym, someone, etc.',
         user: {
           avatar: 'Account avatar',
           banner: 'Banner picture',
@@ -1192,35 +1203,63 @@ export default {
         mapGyms: 'Gyms map',
         myMap: 'My Map',
         mapClimber: 'Climbers map',
-        tools: 'Tools',
+        tools: 'Toolbox',
         helps: 'Helpes',
         about: 'About',
         donation: 'Support us',
         news: 'News',
         contribute: 'Contribute',
         oblyk: 'Oblyk',
+        contact: 'Contact us',
+        toolBar: {
+          account: 'Manage my profile',
+          notification: 'My notifications',
+          theme: 'Change the theme',
+          localisation: 'Check my location',
+          search: 'Search on Oblyk'
+        },
         subHeaders: {
           me: 'Me',
-          account: 'Account',
+          mySpace: 'My space',
+          account: 'Join Oblyk',
           myGyms: 'My climbing gyms',
           myOrganizations: 'My organizations',
           mapsAndTools: 'Maps & Tools',
           project: 'Project',
-          admin: 'Admin'
+          find: 'Find',
+          admin: 'Admin',
+          enrich: 'enrich oblyk',
+          about: 'About Oblyk'
         },
         user: {
+          home: 'Home',
           feed: 'Feed',
           messenger: 'Messenger',
-          ascents: 'Ascents',
+          ascents: 'My climbing book',
           subscribers: 'Subscribers',
           guideBooks: 'My guide book store',
           favorites: 'Favorites',
-          settings: 'Settings'
+          settings: 'Settings',
+          myMap: 'My map'
         },
         guideBook: {
           title: 'Guide books',
           features: 'Features !',
           news: 'New guide books'
+        },
+        find: {
+          crag: 'A crag',
+          gym: 'A gym',
+          guideBook: {
+            title: 'A climbing guide book',
+            around: 'Around a town',
+            new: 'New guide books'
+          },
+          climbers: {
+            title: 'A climber',
+            map: 'Climbers map',
+            how: 'How it works?'
+          }
         }
       },
       footer: {

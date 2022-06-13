@@ -1,7 +1,7 @@
 <template>
-  <v-app :class="hasPaddingTop ? '' : 'no-padding-top-in-app'">
+  <v-app>
     <app-bar />
-    <v-main :class="hasPaddingTop ? '' : 'pt-0'">
+    <v-main>
       <Nuxt />
     </v-main>
 
@@ -93,12 +93,6 @@ export default {
 
       mdiCookie,
       mdiGift
-    }
-  },
-
-  computed: {
-    hasPaddingTop () {
-      return this.$store.state.layout.layoutPadding
     }
   },
 

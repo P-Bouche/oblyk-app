@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-container class="common-page-container">
-      <h1 class="loved-by-king mt-5 mb-10 text-center">
+      <h1 class="mt-5 mb-10 text-center">
         {{ $t('common.pages.contact.title') }}
       </h1>
       <v-row>
@@ -62,10 +62,6 @@ export default {
         { hid: 'og:image', property: 'og:image', content: `${process.env.VUE_APP_OBLYK_APP_URL}/images/oblyk-og-image.jpg` }
       ]
     }
-  },
-
-  mounted () {
-    this.$store.commit('layout/LAYOUT_PADDING', true)
   }
 }
 </script>
