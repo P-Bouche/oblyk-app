@@ -1067,6 +1067,12 @@ export default {
       subscribeToSee: 'Abonnez-vous pour pouvoir le voir !',
       waitingFollowers: 'Un·e abonné·e attend votre confirmation | %{count} abonné·es attendent votre confirmation',
       explainLocalization: 'Active la localisation pour accéder rapidement aux sites, salles et grimpeur autour de toi.',
+      cardsTitle: {
+        myLogbook: 'Mon carnet',
+        aroundMe: 'Autour de moi',
+        subscribesAscents: 'Les croix des copain·es',
+        whatsNew: 'Quoi de neuf ?'
+      },
       tabs: {
         feed: 'Fil',
         profile: 'Profil',
@@ -1119,6 +1125,12 @@ export default {
         comments: 'Commentaires'
       }
     },
+    subscribesAscents: {
+      nextAscents: 'croix suivantes',
+      noAscents: "Tes ami·e·s n'ont pas encore complété leur carnet de croix.",
+      followYourFriends: 'Suis tes ami·es pour voir leur dernières réalisations.',
+      addSubscribesBtn: 'Mes Abonnements'
+    },
     feed: {
       newWord: 'Nouvelle définition de %{name}',
       newCrag: 'Nouvelle falaise : %{name}',
@@ -1145,7 +1157,7 @@ export default {
     },
     dailyCrosses: {
       title: 'Souvenir de mes croix',
-      iMade: "J'ai fait %{count} croix %{ago} <cite>(le %{date)</cite>",
+      iMade: "J'ai fait %{count} croix %{ago} <cite>(le %{date})</cite>",
       addCrosses: 'Compléter mon carnet',
       myLogbook: 'Mon carnet de grimpe',
       myMap: 'Ma carte'

@@ -1067,6 +1067,12 @@ export default {
       subscribeToSee: 'Subscribe to see it!',
       waitingFollowers: 'One subscriber is waiting for your confirmation | %{count} subscribers are waiting for your confirmation',
       explainLocalization: 'Activate the location to quickly access the crags, gyms and climbers around you.',
+      cardsTitle: {
+        myLogbook: 'My logbook',
+        aroundMe: 'Around me',
+        subscribesAscents: 'Friend achievements',
+        whatsNew: 'Whats new ?'
+      },
       tabs: {
         feed: 'Feed',
         profile: 'Profile',
@@ -1119,6 +1125,12 @@ export default {
         comments: 'Comments'
       }
     },
+    subscribesAscents: {
+      nextAscents: 'next ascents',
+      noAscents: 'Your friends have not yet completed their log book',
+      followYourFriends: 'Follow your friends to see their latest achievements.',
+      addSubscribesBtn: 'My Subscriptions'
+    },
     feed: {
       newWord: 'New definition of %{name}',
       newCrag: 'New crag : %{name}',
@@ -1145,7 +1157,7 @@ export default {
     },
     dailyCrosses: {
       title: 'Memories of my climbs',
-      iMade: 'I made %{count} crosses %{ago} <cite>(on %{date)</cite>',
+      iMade: 'I made %{count} crosses %{ago} <cite>(on %{date})</cite>',
       addCrosses: 'Complete my logbook',
       myLogbook: 'My logbook',
       myMap: 'My map'

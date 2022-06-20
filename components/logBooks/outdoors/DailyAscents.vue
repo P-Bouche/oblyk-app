@@ -33,10 +33,11 @@
         <div class="daily-ascents-day">
           <div class="daily-ascents-part">
             <v-card
+              elevation="0"
               height="160"
-              dark
-              class="text-center pa-4 quick-logbook-access"
+              class="text-center pa-4 --bordered-card"
               rounded
+              to="/a/ascents/new"
             >
               <p class="font-weight-bold mb-7">
                 {{ $t('components.dailyCrosses.addCrosses') }}
@@ -52,9 +53,9 @@
         <div class="daily-ascents-day">
           <div class="daily-ascents-part">
             <v-card
+              elevation="0"
               height="160"
-              dark
-              class="text-center pa-4 quick-logbook-access"
+              class="text-center pa-4 --bordered-card"
               rounded
               :to="`/me/${$auth.user.slug_name}/ascents/send-list`"
             >
@@ -72,9 +73,9 @@
         <div class="daily-ascents-day">
           <div class="daily-ascents-part">
             <v-card
+              elevation="0"
               height="160"
-              dark
-              class="text-center pa-4 quick-logbook-access"
+              class="text-center pa-4 --bordered-card"
               rounded
               to="/maps/my-map"
             >
@@ -159,13 +160,10 @@ export default {
     .daily-ascents-day {
       display: inline-block;
       .daily-ascents-part {
-        vertical-align: text-top;
+        vertical-align: top;
         display: inline-block;
         width: 250px;
         margin-right: 10px;
-        .quick-logbook-access {
-          background-color: rgb(30, 30, 30);
-        }
       }
     }
   }
@@ -173,24 +171,6 @@ export default {
     position: absolute;
     right: -15px;
     top: 64px
-  }
-}
-.theme--dark {
-  .daily-ascents-part {
-    .quick-logbook-access {
-      border-color: rgb(50, 50, 50);
-      border-style: solid;
-      border-width: 3px;
-    }
-  }
-}
-.theme--light {
-  .daily-ascents-part {
-    .quick-logbook-access {
-      border-color: rgb(255, 255, 255);
-      border-style: solid;
-      border-width: 3px;
-    }
   }
 }
 </style>
