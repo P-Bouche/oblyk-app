@@ -116,12 +116,20 @@
             <description-line
               :icon="mdiLeafMaple"
               :item-title="$t('models.crag.seasons')"
-              :item-value="crag.seasons.map((season) => { return $t(`models.crag.${season}`) }).join(', ')"
             >
               <template #content>
                 <seasons :seasons="crag.seasons" />
               </template>
             </description-line>
+          </v-col>
+
+          <!-- Rain -->
+          <v-col cols="6">
+            <description-line
+              :icon="mdiWeatherPouring"
+              :item-title="$t('models.crag.rain')"
+              :item-value="crag.rain ? $t(`models.rains.${crag.rain}`) : null"
+            />
           </v-col>
 
           <!-- Areas -->
@@ -198,23 +206,7 @@
 
           <!-- Localization -->
           <v-col cols="12">
-            <description-line
-              :icon="mdiMapMarkerOutline"
-              :item-title="$t('components.crag.localization')"
-            >
-              <template #content>
-                <div>
-                  <strong>
-                    {{ crag.city }}, {{ crag.region }} ({{ crag.country }})
-                  </strong>
-                </div>
-                <div class="mb-3">
-                  {{ latLng }}
-                  <qr-code-btn :value="latLng" />
-                </div>
-                <go-to-crag-modal :crag="crag" />
-              </template>
-            </description-line>
+            <go-to-crag-modal :crag="crag" />
           </v-col>
         </v-row>
       </v-col>
@@ -227,8 +219,12 @@
           </v-icon>
           {{ $t('components.crag.locationAndAccess') }}
         </h2>
-
-        <div style="height: calc(100% - 50px); min-height: 400px">
+        <div>
+          <strong>GPS :</strong>
+          {{ latLng }}
+          <qr-code-btn :value="latLng" />
+        </div>
+        <div style="height: calc(100% - 75px); min-height: 400px">
           <client-only>
             <leaflet-map
               :track-location="false"
@@ -259,9 +255,9 @@ import {
   mdiCompass,
   mdiArrowExpandUp,
   mdiUngroup,
-  mdiMapMarkerOutline,
   mdiMap,
-  mdiWalk
+  mdiWalk,
+  mdiWeatherPouring
 } from '@mdi/js'
 import { SessionConcern } from '@/concerns/SessionConcern'
 import QrCodeBtn from '@/components/forms/QrCodeBtn'
@@ -306,9 +302,9 @@ export default {
       mdiCompass,
       mdiArrowExpandUp,
       mdiUngroup,
-      mdiMapMarkerOutline,
       mdiMap,
-      mdiWalk
+      mdiWalk,
+      mdiWeatherPouring
     }
   },
 
